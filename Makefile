@@ -14,9 +14,9 @@ MLX_LIB_A			=	$(MLX_BUILD_PATH)libmlx42.a -lglfw -ldl -lm -pthread
 
 # Compiler and flags
 CC					=	cc
+MLX_FLAGS			=	-Wunreachable -code -Ofast -g3
 C_FLAGS				=	-Wall -Wextra -Werror #-g3
 INCLUDE_FLAGS		=	-I $(INCLUDE_PATH) -I $(MLX42)/include/MLX42
-MLX_FLAGS			=	-Wunreachable-code -Ofast -g3
 
 # others
 RM					=	rm -f
@@ -36,22 +36,22 @@ BOLD_CYAN			=	\033[1;36m
 BOLD_YELLOW			=	\033[1;33m
 RESET				=	\033[0m
 
-all: 				$(NAME)
+all:				$(NAME)
 
-$(NAME): 		 	$(OBJS) $(INCLUDE_PATH) Makefile
-					@ echo "$(BOLD_CYAN)Building all libraries...$(RESET)"
+$(NAME):			$(OBJS) $(INCLUDE_PATH) Makefile
 					@ make -s makelib
-					@ echo "$(BOLD_CYAN)Building MLX...$(RESET)"
+					@ echo "$(BOLD_CYAN)Building all libraries...$(RESET)"
 					@ make -s libmlx
-					@ echo "$(BOLD_CYAN)Building fract-ol...$(RESET)"
+					@ echo "$(BOLD_CYAN)Building MLX...$(RESET)"
 					@ $(CC) $(C_FLAGS) $(INCLUDE_FLAGS) $(OBJS) $(LIBFT_A) $(FT_PRINTF_A) $(MLX_LIB_A) -o $(NAME)
+					@ echo "$(BOLD_CYAN)Building fract-ol...$(RESET)"
 					@ echo "$(BOLD_GREEN)Done! fract-ol is now ready.$(RESET)"
 
-$(OUTPUT_PATH)%.o: 	$(SRC_PATH)%.c $(INCLUDE_PATH) Makefile
+$(OUTPUT_PATH)%.o:	$(SRC_PATH)%.c $(INCLUDE_PATH) Makefile
 					@ $(MKDIR) $(OUTPUT_PATH)
 					@ $(CC) $(C_FLAGS) $(INCLUDE_FLAGS) -c $< -o $@
 
-makelib: 			$(LIBFT_PATH) $(FT_PRINTF_PATH)
+makelib:			$(LIBFT_PATH) $(FT_PRINTF_PATH)
 					@ make -sC $(LIBFT_PATH) && make -sC $(FT_PRINTF_PATH)
 
 libmlx:
@@ -74,4 +74,4 @@ re:					fclean all
 clone:
 					@ git clone https://github.com/codam-coding-college/MLX42.git MLX42
 
-.PHONY: 			all clean fclean re clone libmlx
+.PHONY:				all clean fclean re clone libmlx makelib

@@ -6,7 +6,7 @@
 /*   By: arphueng <arphueng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 14:35:59 by arphueng          #+#    #+#             */
-/*   Updated: 2025/04/30 23:53:11 by arphueng         ###   ########.fr       */
+/*   Updated: 2025/05/04 19:12:53 by arphueng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int		ft_tolower(int n);
 int		ft_atoi(const char *nptr);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 long	ft_atol(char *nptr);
+double	ft_atof(char *str);
 bool	ft_isdigit(int i);
 bool	ft_invalid_int(long nbr);
 bool	ft_issign(int i);

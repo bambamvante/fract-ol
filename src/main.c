@@ -6,7 +6,7 @@
 /*   By: arphueng <arphueng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:41:53 by arphueng          #+#    #+#             */
-/*   Updated: 2025/05/02 17:16:39 by arphueng         ###   ########.fr       */
+/*   Updated: 2025/05/05 01:02:18 by arphueng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,14 @@ void	check_arguments(t_fractol *f, int ac, char **av)
 		}
 		else if (ac == 2)
 		{
-			f->c.re = 1; //default setting after
-			f->c.im = 1; //default setting after
+			f->c.re = -0.3842;
+			f->c.im = -0.70176;
 		}
 		else
 			ft_exit(ERROR_MSG, EXIT_FAILURE);
 	}
+	else if (f->set == JULIA && ac == 3)
+		ft_exit(ERROR_MSG, EXIT_FAILURE);
 	else if (f->set == MANDELBROT && ac != 2)
 		ft_exit(ERROR_MSG, EXIT_FAILURE);
 }
@@ -46,6 +48,5 @@ int	main(int ac, char **av)
 	init_fractol(&f);
 	draw(&f);
 	mlx_loop(f.mlx);
-	//delete_fractol();
-	return (0);
+	f.clear_fractol(&f);
 }
