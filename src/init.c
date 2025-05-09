@@ -6,7 +6,7 @@
 /*   By: arphueng <arphueng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:41:36 by arphueng          #+#    #+#             */
-/*   Updated: 2025/05/09 20:28:33 by arphueng         ###   ########.fr       */
+/*   Updated: 2025/05/09 20:36:05 by arphueng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	init_fractol(t_fractol *f)
 	mlx_close_hook(f->mlx, close_handler, f);
 	f->x = 0;
 	f->y = 0;
-	f->max_iter = 50;
+	f->max_iter = 200;
 	f->need_to_draw = true;
 	f->zoom = 1.0;
 	f->scale = 200;

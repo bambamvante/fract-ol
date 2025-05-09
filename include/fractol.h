@@ -6,9 +6,10 @@
 /*   By: arphueng <arphueng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:40:17 by arphueng          #+#    #+#             */
-/*   Updated: 2025/05/09 19:42:54 by arphueng         ###   ########.fr       */
+/*   Updated: 2025/05/09 22:24:58 by arphueng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
