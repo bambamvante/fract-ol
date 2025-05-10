@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arphueng <arphueng@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baebae <baebae@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:41:53 by arphueng          #+#    #+#             */
-/*   Updated: 2025/05/09 19:06:35 by arphueng         ###   ########.fr       */
+/*   Updated: 2025/05/10 16:03:36 by baebae           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	check_arguments(t_fractol *f, int ac, char **av)
 		}
 		else if (ac == 2)
 		{
-			f->c.re = -0.3842;
+			f->c.re = -0.2842;
 			f->c.im = -0.70176;
 		}
 	}

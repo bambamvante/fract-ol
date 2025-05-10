@@ -39,8 +39,7 @@ RESET				=	\033[0m
 all:				$(NAME)
 					@ echo "$(BOLD_GREEN)Done! fract-ol is now ready.$(RESET)"
 
-$(NAME):			$(OBJS) $(INCLUDE_PATH) Makefile
-					@ make -s makelib
+$(NAME):			makelib $(OBJS) $(INCLUDE_PATH) Makefile
 					@ echo "$(BOLD_CYAN)Building all libraries...$(RESET)"
 					@ make -s libmlx
 					@ echo "$(BOLD_CYAN)Building MLX...$(RESET)"
