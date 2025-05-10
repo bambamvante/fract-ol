@@ -25,6 +25,7 @@ MKDIR				=	mkdir -p
 
 # source files
 FILES				=	fractol.c init.c calculate.c main.c color.c hook.c
+NORM_FILES 			= 	$(shell find . -name "*.c" -o -name "*.h" | grep -v "./MLX42/")
 
 SRCS				=	$(addprefix $(SRC_PATH), $(FILES))
 OBJS				=	$(SRCS:$(SRC_PATH)%.c=$(OUTPUT_PATH)%.o)
@@ -56,7 +57,6 @@ makelib:			$(LIBFT_PATH) $(FT_PRINTF_PATH)
 libmlx:
 					@ $(MKDIR) $(MLX_BUILD_PATH)
 					@ cmake -S $(MLX42) -B $(MLX_BUILD_PATH) && make -sC $(MLX_BUILD_PATH)
-
 clean:
 					@ $(RM) $(OBJS)
 					@ make clean -sC $(LIBFT_PATH) && make clean -sC $(FT_PRINTF_PATH)
@@ -70,7 +70,9 @@ fclean: clean
 
 re:					fclean all
 
+norm:
+					@ norminette $(NORM_FILES)
 clone:
 					@ git clone https://github.com/codam-coding-college/MLX42.git MLX42
 
-.PHONY:				all clean fclean re clone libmlx makelib
+.PHONY:				all clean fclean re clone libmlx makelib norm
