@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arphueng <arphueng@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baebae <baebae@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:40:17 by arphueng          #+#    #+#             */
-/*   Updated: 2025/05/09 22:33:56 by arphueng         ###   ########.fr       */
+/*   Updated: 2025/05/10 17:39:02 by baebae           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
@@ -18,7 +17,6 @@
 # include "../include/libft/libft.h"
 # include "../MLX42/include/MLX42/MLX42.h"
 
-# include <math.h>
 # include <stdbool.h>
 # include <stdint.h>
 
@@ -33,7 +31,6 @@
 # define ZOOM_MIN 0.0001
 # define ZOOM_MAX 100000
 # define ZOOM_FACTOR 1.3
-
 
 # define ERROR_MSG "\033[1;35m============================================\033[0m \n \
 \033[1;36m      ✦･ﾟ: *✧･ﾟ:* *:･ﾟ✧*:･ﾟ✦\033[0m \n \
