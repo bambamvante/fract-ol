@@ -6,12 +6,11 @@
 /*   By: arphueng <arphueng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 14:43:39 by arphueng          #+#    #+#             */
-/*   Updated: 2025/05/09 13:02:06 by arphueng         ###   ########.fr       */
+/*   Updated: 2025/05/14 13:08:30 by arphueng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fractol.h"
-#include <stdio.h>
 
 void	key_handler(mlx_key_data_t key_type, void *param)
 {
